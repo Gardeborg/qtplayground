@@ -18,9 +18,9 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::init() {
-   //d.show();
-    connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(on_pushButton_clicked()));
-    //connect(&d, SIGNAL(Dialog::sendPlayer()), this, SLOT(setTitle()));
+   d.show();
+   connect(ui->pushButton, SIGNAL(clicked()), this, SLOT(on_pushButton_clicked()));
+   connect(&d, SIGNAL(sendPlayer(QString)), this, SLOT(setButtonText(QString)));
 }
 
 void MainWindow::on_pushButton_clicked()
@@ -33,6 +33,6 @@ void MainWindow::on_pushButton_2_clicked()
     std::cout<<"Push button 2 clicked"<<std::endl;
 }
 
-void MainWindow::apa(QString s) {
+void MainWindow::setButtonText(QString s) {
     ui->pushButton->setText(s);
 }

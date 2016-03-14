@@ -19,7 +19,7 @@ public:
     void init();
 
 public slots:
-    void apa(QString);
+    void setButtonText(QString);
     void on_pushButton_clicked();
     void on_pushButton_2_clicked();
 

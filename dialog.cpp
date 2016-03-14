@@ -16,7 +16,6 @@ Dialog::~Dialog()
 
 void Dialog::accept() {
     std::cout<<"Accept dialogbox" << std::endl;
-    QString qs(ui->lineEdit->text());
     emit sendPlayer(ui->lineEdit->text());
 }
 
